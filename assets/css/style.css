@@ -1,0 +1,519 @@
+:root {
+  --pink-color: #e84393;
+  --gray-color: #eee;
+  --black-color: #333;
+  --green-color: #1a7901;
+  --hover-color: #06c;
+  --canhanhoa-bg-color: #ffefd7;
+  --canhanhoa-color: #ff9f2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2 linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+/* Sticky */
+.header-bottom .navbar-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+/* Header section starts */
+
+.container .header-top .img_logo {
+  margin-right: 3rem;
+}
+
+.container .header-top .img_logo img {
+  height: 3.5rem;
+  /* width: 100px; */
+}
+
+.container .header-top .weather div {
+  padding: 0rem 1rem;
+}
+
+.container .header-top .weather div:first-child {
+  border-right: 0.1rem solid var(--gray-color);
+}
+
+.container .header-top .weather div span {
+  display: block;
+  text-align: right;
+}
+
+.container .header-top .weather .temperature span {
+  font-size: 1.5rem;
+}
+
+.container .header-top .box3 a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  border-right: 0.1rem solid var(--gray-color);
+}
+
+.container .header-top .box3 a:last-child {
+  border-right: none;
+}
+
+.container .header-top .box3 i {
+  font-size: 1.2rem;
+}
+
+.container .header-top .box4 a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  border-right: 0.1rem solid var(--gray-color);
+}
+
+.container .header-top .box4 i {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Section header-bottom */
+.container .header-bottom ul {
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.container .header-bottom ul li {
+  position: relative;
+  /* padding: 0.5rem 0; */
+}
+
+.container .header-bottom ul .nav-item a {
+  margin: 0.5rem 0;
+}
+
+.container .header-bottom ul .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--green-color);
+  /* transition: width 0.5s; */
+}
+
+.container .header-bottom ul .nav-item:hover::after {
+  width: 100%;
+}
+
+/* Style for the submenu */
+.container .header-bottom .navbar-nav .submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--gray-color);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+  padding: 0;
+  list-style: none;
+  /* color: ; */
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.container .header-bottom .navbar-nav .nav-item:hover .submenu {
+  display: block;
+}
+
+.container .header-bottom .navbar-nav .submenu li {
+  padding: 8px 16px;
+  white-space: nowrap;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.container .header-bottom .navbar-nav .submenu li:last-child {
+  border-bottom: none;
+}
+
+.container .header-bottom .navbar-nav .submenu li:hover {
+  background-color: #f1f1f1;
+}
+
+.container .header-bottom .navbar-nav .submenu li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Create the triangle */
+.navbar-nav .submenu::before {
+  content: "";
+  position: absolute;
+  top: -2rem; /* Adjust as needed */
+  left: 12%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--gray-color) transparent;
+}
+
+/* Add blue bar on hover */
+.navbar-nav .submenu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background-color: blue;
+  transition: width 0.3s;
+}
+
+.navbar-nav .submenu li:hover::before {
+  width: 5px; /* Adjust width as needed */
+}
+
+.navbar-nav .submenu li:hover > a {
+  padding-left: 2rem;
+  color: blue;
+  transition: width 0.3s;
+}
+
+/* Header section ends */
+
+/* Home section starts  */
+
+.section1 {
+  border-bottom: 5px solid var(--gray-color);
+  padding-bottom: 20px;
+}
+
+.section1 .box3 {
+  padding-bottom: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.section1 .box3:first-child {
+  margin-top: 0;
+}
+
+.section1 .box3 .image,
+.content {
+  flex: 1;
+}
+
+/* section2  */
+.section2 {
+  /* border-bottom: 5px solid var(--gray-color); */
+  padding-top: 20px;
+  border-bottom: 2px solid var(--gray-color);
+  padding-bottom: 20px;
+}
+
+.section2 .box2 {
+  padding-bottom: 2.5rem;
+}
+
+.section2 .box2 .content {
+  margin-left: 2rem;
+  flex: 2;
+}
+
+.section2 .box2 .image {
+  flex: 1;
+}
+
+.icon-link {
+  color: black; /* Initial text color */
+  text-decoration: none; /* No underline */
+}
+
+.icon-link:hover {
+  color: var(--hover-color); /* Text color on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+.section2 .canhanhoa {
+  background-color: #ffefd7;
+}
+
+.section2 .canhanhoa ~ div {
+  padding: 1.7rem 2rem 1.8rem 2rem;
+}
+
+.section2 .canhanhoa span {
+  color: var(--canhanhoa-color);
+}
+
+.section2 .box4 {
+  padding-bottom: 2.5rem;
+}
+
+.section2 .box4:last-child {
+  padding-bottom: 0;
+}
+
+.section2 .box4 .content {
+  margin-left: 2rem;
+  flex: 2;
+}
+
+.section2 .box4 .image {
+  flex: 1;
+}
+
+/* section3 */
+.section3 {
+  margin-top: 2rem;
+}
+
+.section3 .box1 .image {
+  flex: 1;
+}
+
+.section3 .box1 .content {
+  flex: 1;
+}
+
+.section3 .header .a2,
+.a3,
+.a4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section3 .header .a2:hover {
+  color: var(--hover-color);
+}
+
+.section3 .header .a1 {
+  color: green;
+}
+
+.section3 .header .a1:hover {
+  color: var(--hover-color);
+}
+
+.section3 .left-section3 {
+  border-bottom: 5px solid var(--gray-color);
+}
+
+.section3 .left-section3:last-child {
+  border-bottom: none;
+}
+
+.section3 .box3 .content {
+  flex: 2;
+}
+
+.section3 .box3 .image {
+  flex: 1;
+}
+
+.section3 .header a img {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block;
+  height: 36px;
+  align-items: center;
+}
+
+.section3 .header .a1 img {
+  margin-right: 0.5rem;
+}
+
+/* Section4 */
+.section4 {
+  background-color: #f8f8f8;
+}
+
+.section4 .colbox1 {
+  flex: 1;
+}
+
+.col-5ths {
+  width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.section4 .section4-bot .image img {
+  height: 300px;
+  width: 100%; /* Đảm bảo ảnh có độ rộng bằng 100% của container cha */
+  object-fit: cover; /* Giúp ảnh không bị méo */
+}
+
+.section4 .header-left .fa-solid {
+  color: #1a7901;
+  font-size: 2rem;
+  align-items: baseline;
+}
+
+/* Section5 */
+.section5 .header .a2,
+.a3,
+.a4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section5 .header .a2:hover {
+  color: var(--hover-color);
+}
+
+.section5 .header .a1 {
+  color: green;
+}
+
+.section5 .header .a1:hover {
+  color: var(--hover-color);
+}
+
+/* .section5 {
+  border-bottom: 1px solid var(--gray-color);
+  padding-bottom: 20px;
+} */
+
+.section5 .box3 {
+  padding-bottom: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.section5 .box3:first-child {
+  margin-top: 0;
+}
+
+.section5 .box3 .image,
+.content {
+  flex: 1;
+}
+
+/* section6 */
+
+.section6 .header .a2:hover {
+  color: var(--hover-color);
+}
+
+.section6 .header .a3:hover {
+  color: var(--hover-color);
+}
+
+.section6 .header .a4:hover {
+  color: var(--hover-color);
+}
+
+.section6 .box2 .describe .content {
+  flex: 1;
+}
+
+.section6 .box2 .describe .image {
+  flex: 1;
+}
+
+.section6 .header .title2 {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block;
+  /* height: 36px; */
+  align-items: center;
+}
+
+.section6 .header a {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.section6 .title2 {
+  min-height: 3.3rem;
+}
+
+.section6 {
+  border-bottom: 5px solid #0f6c32;
+}
+
+/* section footer */
+
+.footer {
+  padding-top: 2rem;
+}
+
+.footer .box1 p {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.footer .box1 p a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.footer .box2 p {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.footer .box2 p a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.footer .box2 p a:hover {
+  text-decoration: underline;
+  color: var(--black-color);
+}
+
+.footer .box3 p {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.footer .box3 p a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.footer .box3 .footer-app-ico {
+  font-size: 2.5rem;
+  padding-right: 2rem;
+}
+
+.footer .social {
+  display: inline-block;
+}
+
+.footer .social a {
+  font-size: 1.2rem;
+}
+
+.footer .box3 .facebook {
+  color: #4267b2;
+  font-size: 2rem;
+  padding-right: 0.5rem;
+}
+
+.footer .box3 .youtube {
+  color: red;
+  font-size: 2rem;
+  padding-right: 0.5rem;
+}
+
+.footer .box3 .tiktok {
+  color: black;
+  font-size: 2rem;
+}
+
+.footer .copyright {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #333;
+}
+
+/* boostrap5 */
