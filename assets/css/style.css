@@ -16,7 +16,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: 0.2 linear;
 }
 
@@ -63,10 +63,9 @@ html {
 
 .container .header-top .box3 a {
   text-decoration: none;
-  color: var(--black-color);
-  font-size: 1.2rem;
-  padding: 0 1rem;
-  border-right: 0.1rem solid var(--gray-color);
+  padding: 0 0.5rem;
+  border-right: 1px solid #ccc;
+  font-size: 1.3rem;
 }
 
 .container .header-top .box3 a:last-child {
@@ -77,17 +76,165 @@ html {
   font-size: 1.2rem;
 }
 
+.container .header-top .box3 img {
+  width: 2.3rem;
+  padding-left: 0.5rem;
+}
+
 .container .header-top .box4 a {
   text-decoration: none;
   color: var(--black-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 0 1rem;
-  border-right: 0.1rem solid var(--gray-color);
 }
 
 .container .header-top .box4 i {
-  padding-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form dangky dangnhap */
+
+.container .header-top .modal-title img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .header-top .box1 .dangnhap p {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #808080;
+}
+
+.container .header-top .box1 .dangky p {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #808080;
+}
+
+.modal-body .box1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-body .box1 .dangnhap,
+.modal-body .box1 .dangky {
+  width: 48%; /* Chiếm 48% để có khoảng cách giữa chúng */
+  text-align: center;
+}
+
+.modal-body .box1 .dangnhap p,
+.modal-body .box1 .dangky p {
+  padding: 10px;
+}
+
+.modal-body .box1 .dangnhap {
+  background-color: #eeeeee;
+}
+
+.modal-body .box1 .dangky {
+  background-color: #eeeeee;
+}
+
+.modal-body .box1 .dangnhap p,
+.modal-body .box1 .dangky p {
+  margin: 0;
+}
+
+.modal-body .social .google i {
+  color: yellowgreen;
+  font-size: 1.8rem;
+}
+
+.modal-body .social .facebook i {
+  color: blue;
+  font-size: 1.8rem;
+}
+
+.modal-body .social .google {
+  margin-left: 20px;
+}
+
+.modal-body .social .facebook {
+  margin-right: 20px;
+}
+
+.modal-body .social .google a {
+  text-decoration: none;
+  color: #333;
+}
+
+.modal-body .social .facebook a {
+  text-decoration: none;
+  color: #333;
+}
+
+.modal-body .social .google,
+.facebook {
+  font-size: 1.4rem;
+  padding: 10px 60px;
+  /* outline: 1px solid black; */
+  border-radius: 5px;
+  background-color: #e4e0e7;
+}
+
+.modal-body .hoac-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.modal-body .hoac-wrapper::before,
+.hoac-wrapper::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 3rem;
+}
+
+.modal-body .formdangnhap .quenmatkhau a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-body .btndangnhap button {
+  border: 0px;
+}
+.modal-body .form-control {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  font-size: 1.3rem; /* Điều chỉnh kích thước chữ của placeholder */
+}
+
+.dangnhap.clicked p {
+  background-color: green;
+  /* padding: 10px; */
+  color: white !important;
+}
+
+/* Đổi màu background và color cho phần "Đăng ký" khi được click */
+.dangky.clicked p {
+  background-color: green;
+  /* padding: 10px; */
+  color: white !important;
+}
+
+.box4 .btn.clicked {
+  background-color: green;
+  color: white;
+  border: none; /* Bỏ viền */
+  outline: none; /* Bỏ đường viền khi focus */
+}
+
+.box4 .btn.clicked .fa-regular.fa-user,
+.box4 .btn.clicked .fa-solid.fa-magnifying-glass {
+  color: white; /* Màu icon thành màu trắng */
 }
 
 /* Section header-bottom */
@@ -136,7 +283,7 @@ html {
 }
 
 .container .header-bottom .navbar-nav .submenu li {
-  padding: 8px 16px;
+  padding: 4px 14px;
   white-space: nowrap;
   border-bottom: 1px solid #d5d5d5;
 }
@@ -155,37 +302,72 @@ html {
 }
 
 /* Create the triangle */
-.navbar-nav .submenu::before {
+
+.nav-item:hover .submenu,
+.nav-item:hover .triangle {
+  display: block;
+}
+/* Định dạng tam giác */
+.navbar-nav .triangle {
+  display: none; /* Ẩn tam giác theo mặc định */
   content: "";
   position: absolute;
-  top: -2rem; /* Adjust as needed */
-  left: 12%;
+  top: calc(100% - 10px); /* Vị trí ngay trên submenu */
+  left: 50%;
   transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent var(--gray-color) transparent;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--gray-color); /* Màu của tam giác */
 }
 
 /* Add blue bar on hover */
-.navbar-nav .submenu li::before {
+/* Định vị trí của submenu */
+.nav-item .submenu {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Định dạng menu-item và hiệu ứng gạch ngang */
+.nav-item .submenu .menu-item {
+  position: relative;
+  display: inline-block;
+  padding: 0 0px; /* Điều chỉnh padding theo ý muốn */
+  text-decoration: none; /* Loại bỏ gạch chân mặc định */
+  color: inherit; /* Kế thừa màu văn bản từ phần tử cha */
+  transition: transform 0.1s ease-in-out, padding-left 0.2s ease-in-out,
+    color 0.2s ease-in-out; /* Hiệu ứng mượt mà khi hover */
+}
+
+.nav-item .submenu .menu-item::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 0; /* Điều chỉnh vị trí ngang của gạch */
+  top: 50%;
   width: 0;
-  background-color: blue;
-  transition: width 0.3s;
+  height: 1px; /* Độ dày của gạch ngang */
+  background-color: currentColor; /* Màu của gạch ngang */
+  transition: width 0.1s ease-in-out, left 0.3s ease-in-out; /* Hiệu ứng mượt mà khi hover */
+  transform: translateY(-50%);
 }
 
-.navbar-nav .submenu li:hover::before {
-  width: 5px; /* Adjust width as needed */
+.nav-item .submenu li:hover .menu-item::after {
+  width: 1rem; /* Độ dài của gạch ngang khi hover */
+  background-color: blue; /* Màu của thanh ngang khi hover */
 }
 
-.navbar-nav .submenu li:hover > a {
-  padding-left: 2rem;
-  color: blue;
-  transition: width 0.3s;
+.nav-item .submenu li:hover .menu-item {
+  padding-left: 1.8rem; /* Đẩy chữ sang phải khi hover */
+  color: blue; /* Đổi màu chữ sang xanh khi hover */
+}
+
+/* Thêm hiệu ứng khi hover vào li chứa menu-item */
+.nav-item .submenu li:hover a.menu-item {
+  color: blue; /* Đổi màu chữ của thẻ a sang xanh khi hover */
 }
 
 /* Header section ends */
@@ -269,6 +451,22 @@ html {
 
 .section2 .box4 .image {
   flex: 1;
+}
+
+/* canvas */
+.section2 .content .vnindex a {
+  color: #333;
+  text-decoration: none;
+}
+
+.section2 .content .diem1280 a {
+  color: green;
+  text-decoration: none;
+}
+
+.section2 .content .percent1280 a {
+  color: green;
+  text-decoration: none;
 }
 
 /* section3 */

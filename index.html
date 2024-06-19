@@ -28,23 +28,225 @@
           </div>
 
           <div class="weather d-flex align-items-center">
-            <div class="mr-3">
+            <div class="mr-3 text-black-50 fs-5">
               <span>Hà Nội</span>
-              <span>Thứ 7, 08/06/2024</span>
+              <span>Thứ 7, 19/06/2024</span>
             </div>
             <!-- <div class=""></div> -->
-            <div class="temperature"><span>26°C</span></div>
+            <div class="temperature text-black-50 fs-5">
+              <span><i class="fa-solid fa-cloud-sun-rain fs-2"></i> 26°C</span>
+            </div>
           </div>
 
           <div class="box3 d-flex align-items-center">
-            <a href="#"><i class="fa-solid fa-star"></i> Dân sinh</a>
-            <a href="#"><i class="fa-solid fa-star"></i> Fica</a>
-            <a href="#"><i class="fa-solid fa-star"></i> DTiNews</a>
+            <img
+              src="https://cdnweb.dantri.com.vn/dist/static-dansinh-logo.1-0-1.9fc9db9740e6e6104af7.svg"
+              alt=""
+            />
+            <a href="#" class="text-black-50"> Dân sinh</a>
+            <img src="./assets/images/fica.jpg" alt="" />
+            <a href="#" class="text-black-50"> Fica</a>
+            <img src="./assets/images/dtinews.png" alt="" />
+            <a href="#" class="text-black-50">DTiNews</a>
           </div>
 
           <div class="box4 d-flex align-items-center">
-            <a href="#"><i class="fa-regular fa-user"></i> Đăng nhập</a>
+            <i class="fa-regular fa-user"></i>
+            <button
+              type="button"
+              class="btn text-black-50 fs-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              id="loginButton"
+            >
+              Đăng nhập
+            </button>
             <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    <img
+                      src="./assets/images/Dan_tri_logo.jpg"
+                      alt=""
+                      class="w-25 h-auto pt-3 pb-3"
+                    />
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    style="
+                      font-size: 2.3rem;
+                      position: absolute;
+                      top: 15px;
+                      right: 15px;
+                    "
+                  ></button>
+                </div>
+                <div class="modal-body ps-0 pe-0">
+                  <div class="d-flex flex-column">
+                    <div class="box1 d-flex flex-row justify-content-around">
+                      <div
+                        class="dangnhap flex-fill align-items-center justify-content-center border-end"
+                        onclick="showLoginForm()"
+                      >
+                        <p class="">Đăng nhập</p>
+                      </div>
+
+                      <div
+                        class="dangky flex-fill align-items-center justify-content-center"
+                        onclick="showRegisterForm()"
+                      >
+                        <p>Đăng ký</p>
+                      </div>
+                    </div>
+                    <div class="dangnhapformclick">
+                      <div
+                        class="d-flex justify-content-center align-items-center pt-4 pb-4 fs-5"
+                      >
+                        <p>với các tài khoản mạng xã hội</p>
+                      </div>
+                      <div
+                        class="social d-flex flex-row justify-content-around"
+                      >
+                        <div class="google d-flex align-items-center">
+                          <i class="fa-brands fa-google pe-3"></i>
+                          <a href="">Google</a>
+                        </div>
+                        <div class="facebook d-flex align-items-center">
+                          <i class="fa-brands fa-facebook pe-3"></i>
+                          <a href="">Facebook</a>
+                        </div>
+                      </div>
+                      <div class="hoac-wrapper pt-4 pb-4">hoặc</div>
+                      <div class="formdangnhap">
+                        <form class="ps-5 pe-5">
+                          <div class="mb-4">
+                            <label
+                              for="exampleInputEmail1"
+                              class="form-label fs-5"
+                              >Email</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              placeholder="Email"
+                            />
+                          </div>
+                          <div class="mb-4">
+                            <label
+                              for="exampleInputPassword1"
+                              class="form-label fs-5"
+                              >Password</label
+                            >
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Mật khẩu"
+                            />
+                          </div>
+                          <div class="quenmatkhau mb-4 fs-5 text-end">
+                            <a href="">Quên mật khẩu</a>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="btndangnhap d-grid pe-5 ps-5 mb-4">
+                        <button
+                          class="btn btn-primary fs-4 pt-3 pb-3"
+                          type="button"
+                          style="background-color: green"
+                        >
+                          Đăng nhập
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="dangkyformclick d-none">
+                      <div class="fs-5 pt-4 pb-4 ps-5">
+                        Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!
+                      </div>
+                      <div class="formdangnhap">
+                        <form class="ps-5 pe-5">
+                          <div class="mb-4">
+                            <label
+                              for="exampleInputEmail1"
+                              class="form-label fs-5"
+                              >Họ và tên</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              placeholder="Họ và tên"
+                            />
+                          </div>
+                          <div class="mb-4">
+                            <label
+                              for="exampleInputEmail1"
+                              class="form-label fs-5"
+                              >Email</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              placeholder="Email"
+                            />
+                          </div>
+                          <div class="mb-4">
+                            <label
+                              for="exampleInputPassword1"
+                              class="form-label fs-5"
+                              >Password</label
+                            >
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Mật khẩu"
+                            />
+                          </div>
+                          <div class="quenmatkhau mb-4 fs-5">
+                            Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp
+                            nhận mọi
+                            <a href="" class="text-primary"
+                              >điều kiện về qui định và chính sách của Dân
+                              trí</a
+                            >
+                          </div>
+                        </form>
+                      </div>
+                      <div class="btndangnhap d-grid pe-5 ps-5 mb-4">
+                        <button
+                          class="btn btn-primary bg-success fs-4 pt-3 pb-3"
+                          type="button"
+                          style="background-color: green"
+                        >
+                          Đăng ký
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </header>
       </section>
@@ -75,155 +277,220 @@
               <li class="nav-item"><a class="nav-link" href="#">VIDEO</a></li>
               <li class="nav-item">
                 <a class="nav-link" href="#">XÃ HỘI</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">CHÍNH TRỊ</a></li>
-                  <li><a href="#">HỌC TẬP BÁC</a></li>
-                  <li><a href="#">KHÁT VỌNG HÙNG CƯỜNG</a></li>
-                  <li><a href="#">MÔI TRƯỜNG</a></li>
-                  <li><a href="#">GIAO THÔNG</a></li>
-                  <li><a href="#">NÓNG TRÊN MẠNG</a></li>
-                  <li><a href="#">SÁNG KIẾN AN TOÀN GIAO THÔNG</a></li>
+                  <li><a href="#" class="menu-item">CHÍNH TRỊ</a></li>
+                  <li><a href="#" class="menu-item">HỌC TẬP BÁC</a></li>
+                  <li>
+                    <a href="#" class="menu-item">KHÁT VỌNG HÙNG CƯỜNG</a>
+                  </li>
+                  <li><a href="#" class="menu-item">MÔI TRƯỜNG</a></li>
+                  <li><a href="#" class="menu-item">GIAO THÔNG</a></li>
+                  <li><a href="#" class="menu-item">NÓNG TRÊN MẠNG</a></li>
+                  <li>
+                    <a href="#" class="menu-item"
+                      >SÁNG KIẾN AN TOÀN GIAO THÔNG</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">THẾ GIỚI</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">QUÂN SỰ</a></li>
-                  <li><a href="#">PHÂN TÍCH - BÌNH LUẬN</a></li>
-                  <li><a href="#">THẾ GIỚI ĐÓ ĐÂY</a></li>
-                  <li><a href="#">KIỀU BÀO</a></li>
+                  <li><a href="#" class="menu-item">QUÂN SỰ</a></li>
+                  <li>
+                    <a href="#" class="menu-item">PHÂN TÍCH - BÌNH LUẬN</a>
+                  </li>
+                  <li><a href="#" class="menu-item">THẾ GIỚI ĐÓ ĐÂY</a></li>
+                  <li><a href="#" class="menu-item">KIỀU BÀO</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">KINH DOANH</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">TÀI CHÍNH</a></li>
-                  <li><a href="#">CHỨNG KHOÁN</a></li>
-                  <li><a href="#">DOANH NGHIỆP</a></li>
-                  <li><a href="#">KHỞI NGHIỆP</a></li>
-                  <li><a href="#">TIÊU DÙNG</a></li>
-                  <li><a href="#">ESG - PHÁT TRIỂN BỀN VỮNG</a></li>
-                  <li><a href="#">TIẾT KIỆM ĐIỆN</a></li>
+                  <li><a href="#" class="menu-item">TÀI CHÍNH</a></li>
+                  <li><a href="#" class="menu-item">CHỨNG KHOÁN</a></li>
+                  <li><a href="#" class="menu-item">DOANH NGHIỆP</a></li>
+                  <li><a href="#" class="menu-item">KHỞI NGHIỆP</a></li>
+                  <li><a href="#" class="menu-item">TIÊU DÙNG</a></li>
+                  <li>
+                    <a href="#" class="menu-item">ESG - PHÁT TRIỂN BỀN VỮNG</a>
+                  </li>
+                  <li><a href="#" class="menu-item">TIẾT KIỆM ĐIỆN</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">BẤT ĐỘNG SẢN</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">DỰ ÁN</a></li>
-                  <li><a href="#">THỊ TRƯỜNG</a></li>
-                  <li><a href="#">NHÀ ĐẤT</a></li>
-                  <li><a href="#">NHỊP SỐNG ĐÔ THỊ</a></li>
-                  <li><a href="#">SỐNG XANH</a></li>
-                  <li><a href="#">NỘI THẤT</a></li>
+                  <li><a href="#" class="menu-item">DỰ ÁN</a></li>
+                  <li><a href="#" class="menu-item">THỊ TRƯỜNG</a></li>
+                  <li><a href="#" class="menu-item">NHÀ ĐẤT</a></li>
+                  <li><a href="#" class="menu-item">NHỊP SỐNG ĐÔ THỊ</a></li>
+                  <li><a href="#" class="menu-item">SỐNG XANH</a></li>
+                  <li><a href="#" class="menu-item">NỘI THẤT</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">THỂ THAO</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">EURO 2024</a></li>
-                  <li><a href="#">BÓNG ĐÁ TRONG NƯỚC</a></li>
-                  <li><a href="#">BÓNG ĐÁ CHÂU ÂU</a></li>
-                  <li><a href="#">TENNIS</a></li>
-                  <li><a href="#">GOLF</a></li>
-                  <li><a href="#">VÕ THUẬT - CÁC MÔN KHÁC</a></li>
-                  <li><a href="#">CHAMPIONS LEAGUE</a></li>
-                  <li><a href="#">HẬU TRƯỜNG</a></li>
-                  <li><a href="#">LỊCH THI ĐẤU</a></li>
+                  <li><a href="#" class="menu-item">EURO 2024</a></li>
+                  <li><a href="#" class="menu-item">BÓNG ĐÁ TRONG NƯỚC</a></li>
+                  <li><a href="#" class="menu-item">BÓNG ĐÁ CHÂU ÂU</a></li>
+                  <li><a href="#" class="menu-item">TENNIS</a></li>
+                  <li><a href="#" class="menu-item">GOLF</a></li>
+                  <li>
+                    <a href="#" class="menu-item">VÕ THUẬT - CÁC MÔN KHÁC</a>
+                  </li>
+                  <li><a href="#" class="menu-item">CHAMPIONS LEAGUE</a></li>
+                  <li><a href="#" class="menu-item">HẬU TRƯỜNG</a></li>
+                  <li><a href="#" class="menu-item">LỊCH THI ĐẤU</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">VIỆC LÀM</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">CHÍNH SÁCH</a></li>
-                  <li><a href="#">LÀM GIÀU</a></li>
-                  <li><a href="#">CHUYỂN NGHỀ</a></li>
-                  <li><a href="#">NHÂN LỰC MỚI</a></li>
+                  <li><a href="#" class="menu-item">CHÍNH SÁCH</a></li>
+                  <li><a href="#" class="menu-item">LÀM GIÀU</a></li>
+                  <li><a href="#" class="menu-item">CHUYỂN NGHỀ</a></li>
+                  <li><a href="#" class="menu-item">NHÂN LỰC MỚI</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">NHÂN ÁI</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">HOÀN CẢNH</a></li>
-                  <li><a href="#">DỰ ÁN CỘNG ĐỒNG</a></li>
-                  <li><a href="#">NHỊP CẦU NHÂN ÁI</a></li>
-                  <li><a href="#">VƯỢT LÊN SỐ PHẬN</a></li>
+                  <li><a href="#" class="menu-item">HOÀN CẢNH</a></li>
+                  <li><a href="#" class="menu-item">DỰ ÁN CỘNG ĐỒNG</a></li>
+                  <li><a href="#" class="menu-item">NHỊP CẦU NHÂN ÁI</a></li>
+                  <li><a href="#" class="menu-item">VƯỢT LÊN SỐ PHẬN</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">SỨC KHỎE</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">UNG THƯ</a></li>
-                  <li><a href="#">SỐNG KHỎE</a></li>
-                  <li><a href="#">DỊCH VỤ Y TẾ QUỐC TẾ</a></li>
-                  <li><a href="#">KIẾN THỨC GIỚI TÍNH</a></li>
-                  <li><a href="#">TƯ VẤN</a></li>
-                  <li><a href="#">KHỎE ĐẸP</a></li>
-                  <li><a href="#">SỨC KHỎE CHỦ ĐỘNG</a></li>
+                  <li><a href="#" class="menu-item">UNG THƯ</a></li>
+                  <li><a href="#" class="menu-item">SỐNG KHỎE</a></li>
+                  <li>
+                    <a href="#" class="menu-item">DỊCH VỤ Y TẾ QUỐC TẾ</a>
+                  </li>
+                  <li><a href="#" class="menu-item">KIẾN THỨC GIỚI TÍNH</a></li>
+                  <li><a href="#" class="menu-item">TƯ VẤN</a></li>
+                  <li><a href="#" class="menu-item">KHỎE ĐẸP</a></li>
+                  <li><a href="#" class="menu-item">SỨC KHỎE CHỦ ĐỘNG</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">VĂN HÓA</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">SÁCH HAY</a></li>
-                  <li><a href="#">ĐỜI SỐNG VĂN HÓA</a></li>
-                  <li><a href="#">ĐIỆN ẢNH</a></li>
-                  <li><a href="#">ÂM NHẠC</a></li>
-                  <li><a href="#">TẾT 2024</a></li>
-                  <li><a href="#">HẠT GIỐNG TÂM HỒN</a></li>
+                  <li><a href="#" class="menu-item">SÁCH HAY</a></li>
+                  <li><a href="#" class="menu-item">ĐỜI SỐNG VĂN HÓA</a></li>
+                  <li><a href="#" class="menu-item">ĐIỆN ẢNH</a></li>
+                  <li><a href="#" class="menu-item">ÂM NHẠC</a></li>
+                  <li><a href="#" class="menu-item">TẾT 2024</a></li>
+                  <li><a href="#" class="menu-item">HẠT GIỐNG TÂM HỒN</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">GIẢI TRÍ</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">HẬU TRƯỜNG</a></li>
-                  <li><a href="#">THỜI TRANG</a></li>
-                  <li><a href="#">TVSHOW</a></li>
+                  <li><a href="#" class="menu-item">HẬU TRƯỜNG</a></li>
+                  <li><a href="#" class="menu-item">THỜI TRANG</a></li>
+                  <li><a href="#" class="menu-item">TVSHOW</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">XE++</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">THỊ TRƯỜNG XE</a></li>
-                  <li><a href="#">XE ĐIỆN</a></li>
-                  <li><a href="#">ĐÁNH GIÁ</a></li>
-                  <li><a href="#">CỘNG ĐỒNG XE</a></li>
-                  <li><a href="#">KINH NGHIỆM - TƯ VẤN</a></li>
-                  <li><a href="#">BẢNG GIÁ Ô TÔ</a></li>
+                  <li><a href="#" class="menu-item">THỊ TRƯỜNG XE</a></li>
+                  <li><a href="#" class="menu-item">XE ĐIỆN</a></li>
+                  <li><a href="#" class="menu-item">ĐÁNH GIÁ</a></li>
+                  <li><a href="#" class="menu-item">CỘNG ĐỒNG XE</a></li>
+                  <li>
+                    <a href="#" class="menu-item">KINH NGHIỆM - TƯ VẤN</a>
+                  </li>
+                  <li><a href="#" class="menu-item">BẢNG GIÁ Ô TÔ</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">SỨC MẠNH SỐ</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">SẢN PHẨM</a></li>
-                  <li><a href="#">DI ĐỘNG - VIỄN THÔNG</a></li>
-                  <li><a href="#">PHẦN MỀM - BẢO MẬT</a></li>
-                  <li><a href="#">CỘNG ĐỒNG MẠNG</a></li>
+                  <li><a href="#" class="menu-item">SẢN PHẨM</a></li>
+                  <li>
+                    <a href="#" class="menu-item">DI ĐỘNG - VIỄN THÔNG</a>
+                  </li>
+                  <li><a href="#" class="menu-item">PHẦN MỀM - BẢO MẬT</a></li>
+                  <li><a href="#" class="menu-item">CỘNG ĐỒNG MẠNG</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">GIÁO DỤC</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">GÓC PHỤ HUYNH</a></li>
-                  <li><a href="#">KHUYẾN HỌC</a></li>
-                  <li><a href="#">GƯƠNG SÁNG</a></li>
-                  <li><a href="#">GIÁO DỤC - NGHỀ NGHIỆP</a></li>
-                  <li><a href="#">DU HỌC</a></li>
-                  <li><a href="#">TUYỂN SINH</a></li>
+                  <li><a href="#" class="menu-item">GÓC PHỤ HUYNH</a></li>
+                  <li><a href="#" class="menu-item">KHUYẾN HỌC</a></li>
+                  <li><a href="#" class="menu-item">GƯƠNG SÁNG</a></li>
+                  <li>
+                    <a href="#" class="menu-item">GIÁO DỤC - NGHỀ NGHIỆP</a>
+                  </li>
+                  <li><a href="#" class="menu-item">DU HỌC</a></li>
+                  <li><a href="#" class="menu-item">TUYỂN SINH</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">AN SINH</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">CHUYỆN ĐỜI</a></li>
-                  <li><a href="#">DÂN SINH</a></li>
-                  <li><a href="#">CHUYỂN ĐỘNG</a></li>
+                  <li><a href="#" class="menu-item">CHUYỆN ĐỜI</a></li>
+                  <li><a href="#" class="menu-item">DÂN SINH</a></li>
+                  <li><a href="#" class="menu-item">CHUYỂN ĐỘNG</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">PHÁP LUẬT</a>
+
+                <div class="triangle"></div>
+
                 <ul class="submenu">
-                  <li><a href="#">HỒ SƠ VỤ ÁN</a></li>
-                  <li><a href="#">PHÁP ĐÌNH</a></li>
+                  <li><a href="#" class="menu-item">HỒ SƠ VỤ ÁN</a></li>
+                  <li><a href="#" class="menu-item">PHÁP ĐÌNH</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -387,7 +654,7 @@
       <section class="section2">
         <div class="container">
           <div class="row">
-            <div class="col-md-3 ps-0">
+            <div class="col-md-3 ps-0 pe-4">
               <div class="d-flex flex-column">
                 <p class="fs-4 fw-semibold">
                   DÂN TRÍ <span class="text-success"> SPOTLIGHT</span>
@@ -519,7 +786,65 @@
           </div>
 
           <div class="row">
-            <div class="col-md-3 bg-success">CANVAS 1</div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-12 d-flex flex-row">
+                  <div class="image">
+                    <img
+                      src="./assets/images/dnse.png"
+                      alt=""
+                      class="w-25 h-auto"
+                    />
+                  </div>
+
+                  <div class="content d-flex flex-row">
+                    <div class="vnindex pe-3"><a href="">VNINDEX</a></div>
+                    <div class="diem">
+                      <div class="diem1280 text-start text-success">
+                        <a href="">1,280</a>
+                      </div>
+                      <div class="percent1280"><a href="">5(0%)</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="image">
+                    <img src="" alt="" />
+                  </div>
+
+                  <div class="describe">
+                    <div class="title">
+                      <p>Kết quả xổ số Vietlott</p>
+                    </div>
+                    <div class="linktitle">
+                      <a
+                        href="https://vietlott.vn"
+                        target="_blank"
+                        rel="nofollow noopener"
+                        >Kết quả Max 3D Pro, 3D, Keno, Bingo18</a
+                      >
+                    </div>
+
+                    <div class="taitroboi">
+                      Tài trợ bởi
+                      <a
+                        href="https://vietlott.vn"
+                        target="_blank"
+                        rel="nofollow noopener"
+                        ><img
+                          src="https://cdnweb.dantri.com.vn/dist/36dd891b077830d8427a.png"
+                          alt="Công ty Xổ Số Điện Toán Việt Nam - Bộ Tài Chính"
+                          width="166"
+                          height="54"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-md-6 canhanhoa">
               <div class="d-flex flex-column pt-4">
                 <p class="fs-4 fw-semibold">
@@ -4285,5 +4610,57 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function showLoginForm() {
+        // Xóa lớp 'clicked' từ các phần tử có lớp 'clicked' trước đó
+        const dangnhap = document.querySelector(".dangnhap");
+        dangnhap.classList.remove("clicked");
+
+        const dangky = document.querySelector(".dangky");
+        dangky.classList.remove("clicked");
+
+        // Thêm lớp 'clicked' vào phần tử 'Đăng nhập' khi được click
+        dangnhap.classList.add("clicked");
+
+        // Xóa lớp 'd-none' để hiển thị form "Đăng nhập"
+        const dangnhapformclick = document.querySelector(".dangnhapformclick");
+        dangnhapformclick.classList.remove("d-none");
+
+        // Thêm lớp 'd-none' để ẩn form "Đăng ký"
+        const dangkyformclick = document.querySelector(".dangkyformclick");
+        dangkyformclick.classList.add("d-none");
+      }
+
+      function showRegisterForm() {
+        // Xóa lớp 'clicked' từ các phần tử có lớp 'clicked' trước đó
+        const dangnhap = document.querySelector(".dangnhap");
+        dangnhap.classList.remove("clicked");
+
+        const dangky = document.querySelector(".dangky");
+        dangky.classList.remove("clicked");
+
+        // Thêm lớp 'clicked' vào phần tử 'Đăng ký' khi được click
+        dangky.classList.add("clicked");
+
+        // Xóa lớp 'd-none' để hiển thị form "Đăng ký"
+        const dangkyformclick = document.querySelector(".dangkyformclick");
+        dangkyformclick.classList.remove("d-none");
+
+        // Thêm lớp 'd-none' để ẩn form "Đăng nhập"
+        const dangnhapformclick = document.querySelector(".dangnhapformclick");
+        dangnhapformclick.classList.add("d-none");
+      }
+
+      // Lấy ra phần tử button "Đăng nhập"
+      const loginButton = document.getElementById("loginButton");
+
+      // Thêm sự kiện click vào nút "Đăng nhập"
+      loginButton.addEventListener("click", function () {
+        // Thêm class clicked vào phần tử p bên trong .dangnhap
+        const dangNhapP = document.querySelector(".dangnhap");
+        dangNhapP.classList.add("clicked");
+      });
+    </script>
   </body>
 </html>
